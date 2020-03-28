@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/iaerickson/project2/issues"
   },
-  "homepage": "https://github.com/iaerickson/project2#readme"
+  "homepage": "https://github.com/iaerickson/project2#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
