@@ -1,0 +1,20 @@
+{
+  "name": "project2",
+  "version": "1.0.0",
+  "description": "This is the repo for project 2",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iaerickson/project2.git"
+  },
+  "author": "Anthony Arroyo, John Davis, Ian Erickson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iaerickson/project2/issues"
+  },
+  "homepage": "https://github.com/iaerickson/project2#readme"
+}
