@@ -5,10 +5,10 @@
 --new_cast_list table for user's recasting of a movie
 --keeps track of movie, user, actors they are recasting, and how many thumbs up this recasting gets 
 
-DROP DATABASE IF EXISTS reCastdb;
-CREATE database reCastdb;
+DROP DATABASE IF EXISTS take2db;
+CREATE database take2db;
 
-USE reCastdb;
+USE take2db;
 
 
 
