@@ -1,0 +1,9 @@
+<ul>
+  {{#each movies}}
+      {{> movies/movie-block }}
+  {{/each}}
+</ul>
+
+
+{{!-- // when you render index, it expects an array
+of movie objects and then renders a partial for each --}}
