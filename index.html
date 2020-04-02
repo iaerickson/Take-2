@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <title>Take2</title>
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel='stylesheet' type='text/css' href='assets/css/style.css'>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<title>Take2</title>
-</head>
-
-<body>
-	<div class="jumbotron">
-		<h1 class="text-center">Take2</h1>
-	</div>
-	<!--USER INPUT FORM-->
-	<div class="searchDiv">
-		<form class="search-form">
-			<label for="movie-input">Search a movie to re-cast</label><br>
-			<input id="movie-input" type="text" placeholder="Movie Title" name="search">
-			<input id="find-movie" type="submit" value="Search">
-		</form>
-	</div>
-	<!-- MOVIE SEARCH RESULTS-->
-	<div id='movieDisplayDiv' class="movieDisplayDiv"></div>
-	<!--RE-CASTED MOVIES-->
-	<div id='recastedDisplayDiv' class="recastedDisplayDiv"></div>
-</body>
-
+  <body>
+    <div class="jumbotron">
+      <h1 class="text-center">Take2</h1>
+    </div>
+    <!--USER INPUT FORM-->
+    <div class="searchDiv">
+      <form class="search-form">
+        <label for="movie-input">Search a movie to re-cast</label><br />
+        <input
+          id="movie-input"
+          type="text"
+          placeholder="Movie Title"
+          name="search"
+        />
+        <input id="find-movie" type="submit" value="Search" />
+      </form>
+    </div>
+    <!-- MOVIE SEARCH RESULTS-->
+    <div id="movieDisplayDiv" class="movieDisplayDiv"></div>
+    <!--RE-CASTED MOVIES-->
+    <div id="recastedDisplayDiv" class="recastedDisplayDiv"></div>
+  </body>
 </html>
