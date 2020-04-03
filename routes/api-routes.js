@@ -1,15 +1,17 @@
 var db = require('../models');
 
 module.exports = function(app) {
+  //post route that takes the form on the recast list
+  //posts this data in a row in the new cast table
   app.post('/api/recast', function(req, res) {
-    db.Newcast.create({
-      //movie: req.body.movie,
-      //user: req.body.user,
-      //actor1: req.body.actor1,
-      //actor2: req.body.actor1,
-      //actor3: req.body.actor1,
-      //actor4: req.body.actor1,
-      //thumbs_up: 0;
+    db.NewCast.create({
+      movie: req.body.movie,
+      user: req.body.user,
+      actorRole1: req.body.actorRole1,
+      actorRole2: req.body.actorRole2,
+      actorRole3: req.body.actorRole3,
+      actorRole4: req.body.actorRole4,
+      thumbs_up: 0
     })
       .then(function() {
         //res.redirect() to page saying recast was submitted
@@ -19,4 +21,37 @@ module.exports = function(app) {
         res.status(401).json(err);
       });
   });
+
+  //A get request when the user searches from the actor database
+  //and populate the actor recast field
+  //:::Migh need to reformat the where name: req.body
+  app.get('/api/actors/:name', function(req, res) {
+    console.log(req.body);
+    db.Actor.findOne({
+      where: {
+        name: req.body
+      }
+    }).then(function(dbActor) {
+      //code to add the actor we just pulled to the db to the form
+      //res.json(dbActor);
+      //Figure out how this route works with the search bar/suggested actors
+    });
+  });
+
+  //A get request when someone wants to view a user's recast list
+
+  //Create
+  //Read
+  //Update
+  //  //thumbs up increment route
+  //finding the recast list by its id
+  app.get('/api/recast/:id', function(req, res) {
+    db.NewCast.findOne({
+      where: {
+        id: req.params.id
+      }
+    }).then(func);
+  });
+
+  //Delete
 };
