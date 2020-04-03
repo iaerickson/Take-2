@@ -3,6 +3,7 @@ var fs = require('fs');
 
 // Set our port to 8080
 var PORT = process.env.PORT || 3000;
+//var db = require("./models");
 
 // Create our server
 var server = http.createServer(handleRequest);
@@ -19,7 +20,17 @@ function handleRequest(req, res) {
   });
 }
 
+//require('./routes/html-routes.js')(app);
+//require('./routes/api-routes.js')(app);
+
 // Starts our server
+
+// db.sequelize.sync().then(function() {
+//   app.listen(PORT, function() {
+//     console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
+//   });
+// });
+
 server.listen(PORT, function() {
   console.log('Server is listening on PORT: ' + PORT);
 });

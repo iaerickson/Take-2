@@ -13,3 +13,7 @@ module.exports = function(sequelize, DataTypes) {
   });
   return Actor;
 };
+
+//things to maybe add:
+//use count to track actor's popularity amongst users
+//
