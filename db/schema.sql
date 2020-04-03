@@ -11,31 +11,31 @@ CREATE database take2db;
 USE take2db;
 
 
-
-CREATE TABLE actors (
-    position INT NOT NULL,
-    -- const VARCHAR(9) NOT NULL,
-    -- created DATE NOT NULL,
-    -- modified DATE NOT NULL,
-    -- description VARCHAR(2),
-    name VARCHAR(40),
-    -- known_for VARCHAR(80),
-    birthdate DATE NOT NULL,
-    PRIMARY KEY (position)
-);
-
-
+-- Commenting out tables since we have the sequelize models set up
+-- CREATE TABLE actors (
+--     position INT NOT NULL,
+--     -- const VARCHAR(9) NOT NULL,
+--     -- created DATE NOT NULL,
+--     -- modified DATE NOT NULL,
+--     -- description VARCHAR(2),
+--     name VARCHAR(40),
+--     -- known_for VARCHAR(80),
+--     birthdate DATE NOT NULL,
+--     PRIMARY KEY (position)
+-- );
 
 
-CREATE TABLE new_cast_list (
-  id INT NOT NULL AUTO_INCREMENT,
-  movie VARCHAR(80) NOT NULL,
-  user VARCHAR(55) NOT NULL,
-  actor_role1 VARCHAR(40) NOT NULL,
-  actor_role2 VARCHAR(40),
-  actor_role3 VARCHAR(40),
-  actor_role4 VARCHAR(40),
-  thumbs_up INT,
---   thumbs_down INT,
-  PRIMARY KEY (id)
-);
+
+
+-- CREATE TABLE new_cast_list (
+--   id INT NOT NULL AUTO_INCREMENT,
+--   movie VARCHAR(80) NOT NULL,
+--   user VARCHAR(55) NOT NULL,
+--   actor_role1 VARCHAR(40) NOT NULL,
+--   actor_role2 VARCHAR(40),
+--   actor_role3 VARCHAR(40),
+--   actor_role4 VARCHAR(40),
+--   thumbs_up INT,
+-- --   thumbs_down INT,
+--   PRIMARY KEY (id)
+-- );
