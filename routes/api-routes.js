@@ -19,6 +19,7 @@ module.exports = function(app) {
       .then(function(dbNewCast) {
         //For testing purposes, after the form is posted, we will just render the form
         res.json(dbNewCast);
+        console.log(dbNewCast);
         //res.redirect() to page saying recast was submitted
         //home page
       })
