@@ -8,8 +8,8 @@ module.exports = function(app) {
     db.NewCast.create({
       movie: req.body.movie,
       //commenting out user for testing
-      //user: req.body.user,
-      user: 'admin',
+      user: req.body.user,
+      //user: "admin",
       actorRole1: req.body.actorRole1,
       actorRole2: req.body.actorRole2,
       actorRole3: req.body.actorRole3,
@@ -19,6 +19,7 @@ module.exports = function(app) {
       .then(function(dbNewCast) {
         //For testing purposes, after the form is posted, we will just render the form
         res.json(dbNewCast);
+        console.log(dbNewCast);
         //res.redirect() to page saying recast was submitted
         //home page
       })

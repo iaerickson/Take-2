@@ -19,7 +19,7 @@ module.exports = function(sequelize, DataTypes) {
     actorRole4: {
       type: DataTypes.STRING
     },
-    thumbs_up: {
+    thumbsUp: {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
