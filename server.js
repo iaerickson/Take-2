@@ -40,13 +40,13 @@ app.use(express.static('public'));
 
 //Routes
 //======================================
-//require('./routes/html-routes.js')(app);
+require('./routes/html-routes.js')(app);
 require('./routes/api-routes.js')(app);
 
 // Starts our server
 //removed "{ force: true }: from .sync() so it wouldn't drop tables
-db.sequelize.sync().then(function() {
-  app.listen(PORT, function() {
+db.sequelize.sync().then(function () {
+  app.listen(PORT, function () {
     console.log('App listening on PORT ' + PORT);
   });
 });
