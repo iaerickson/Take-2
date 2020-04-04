@@ -1,9 +1,10 @@
 $(document).ready(function () {
   // const movie needs to be read in from form upon submit button????? also we must add a + between words if title is more than 1 word
-  $('#movie-search').submit(function (event) {
-    let movie = $('#movie-input');
-    let movie = queryFormatter(movie);
-    //event.preventDefault();
+  $('#movie-search').on('click', function (event) {
+    event.preventDefault();
+    let movie = $('#movie-input').val().trim();
+    //movie = queryFormatter(movie);
+
     var queryURL =
       'https://api.themoviedb.org/3/movie/550?api_key=b4cf32bed876d97cc4ef65987205c624';
     var queryURL2 =
@@ -12,7 +13,6 @@ $(document).ready(function () {
       'https://api.themoviedb.org/3/search/movie?api_key=b4cf32bed876d97cc4ef65987205c624&query=' +
       movie;
 
-    //event.preventDefault();
     $.ajax({
       url: queryURL3,
       method: 'GET',
@@ -59,8 +59,8 @@ $(document).ready(function () {
   });
 
   //function that will run to make the search-term palatable for query search
-  function queryFormatter(movieTitle) {
-    let formatted = movieTitle.split(' ').join('+');
-    return formatted;
-  }
+  //unction queryFormatter(movieTitle) {
+  //  let formatted = movieTitle.split(' ').join('+');
+  //  return formatted;
+  //}
 });
