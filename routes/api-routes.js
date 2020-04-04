@@ -1,9 +1,9 @@
 var db = require('../models');
 
-module.exports = function(app) {
+module.exports = function (app) {
   //post route that takes the form on the recast list
   //posts this data in a row in the new cast table
-  app.post('/api/recast', function(req, res) {
+  app.post('/api/recast', function (req, res) {
     console.log(req.body);
     db.NewCast.create({
       movie: req.body.movie,
@@ -14,16 +14,16 @@ module.exports = function(app) {
       actorRole2: req.body.actorRole2,
       actorRole3: req.body.actorRole3,
       actorRole4: req.body.actorRole4,
-      thumbs_up: 0
+      thumbs_up: 0,
     })
-      .then(function(dbNewCast) {
+      .then(function (dbNewCast) {
         //For testing purposes, after the form is posted, we will just render the form
         res.json(dbNewCast);
         console.log(dbNewCast);
         //res.redirect() to page saying recast was submitted
         //home page
       })
-      .catch(function(err) {
+      .catch(function (err) {
         res.status(401).json(err);
       });
   });
@@ -61,6 +61,8 @@ module.exports = function(app) {
   //     }
   //   }).then(func);
   // });
+  //
+  //method to render and pull all recasts
 
   //Delete
 };
