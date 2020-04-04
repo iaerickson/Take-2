@@ -12,8 +12,9 @@ var db = {};
 console.log(config);
 console.log(config.use_env_variable);
 console.log(env);
-
-if (config.use_env_variable) {
+//config.use_env_variable
+if (env === 'production') {
+  console.log('env does indeed equal production');
   var sequelize = new Sequelize(process.env[config.use_env_variable]);
 } else {
   var sequelize = new Sequelize(
