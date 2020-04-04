@@ -8,8 +8,8 @@ module.exports = function(app) {
     db.NewCast.create({
       movie: req.body.movie,
       //commenting out user for testing
-      //user: req.body.user,
-      user: 'admin',
+      user: req.body.user,
+      //user: "admin",
       actorRole1: req.body.actorRole1,
       actorRole2: req.body.actorRole2,
       actorRole3: req.body.actorRole3,
