@@ -14,9 +14,9 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "yourpasswd",
-    "database": "take2db",
+    "username": "ii12l8xxh1jnkqpo",
+    "password": "pio6i3ty8gn9201e",
+    "database": "ktlge9m8cixpv1e2",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }
