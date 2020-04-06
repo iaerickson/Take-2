@@ -4,6 +4,7 @@
 // var fs = require('fs');
 //=======================
 var express = require('express');
+var exphbs = require('express-handlebars');
 
 //Set up our port
 
@@ -21,6 +22,10 @@ var app = express();
 //// Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+//Handlebars
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.set('view engine', 'handlebars');
 
 // Static directory
 app.use(express.static('public'));
@@ -40,8 +45,11 @@ app.use(express.static('public'));
 
 //Routes
 //======================================
-require('./routes/html-routes.js')(app);
-require('./routes/api-routes.js')(app);
+var htmlRoutes = require('./routes/html-routes.js');
+var apiRoutes = require('./routes/api-routes.js');
+
+app.use(htmlRoutes);
+app.use(apiRoutes);
 
 // Starts our server
 //removed "{ force: true }: from .sync() so it wouldn't drop tables
