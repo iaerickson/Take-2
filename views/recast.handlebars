@@ -1,0 +1,34 @@
+<h1>Recast Movie</h1>
+
+<h1>Recast your movie</h1>
+
+<table>
+  <tr>
+    <th>Roles</th>
+    <th>Original Actor</th>
+    <th>New Actor</th>
+  </tr>
+  <tr>
+    <td>{{this.dataValues.role1}}</td>
+    <td>{{this.dataValues.actor1}}</td>
+    <td>NEW ACTOR</td>
+  </tr>
+  <tr>
+    <td>{{this.dataValues.role2}}</td>
+    <td>{{this.dataValues.actor2}}</td>
+    <td>NEW ACTOR</td>
+  </tr>
+  <tr>
+    <td>{{this.dataValues.role3}}</td>
+    <td>{{this.dataValues.actor3}}</td>
+    <td>NEW ACTOR</td>
+  </tr>
+  <tr>
+    <td>{{this.dataValues.role4}}</td>
+    <td>{{this.dataValues.actor4}}</td>
+    <td>NEW ACTOR</td>
+  </tr>
+</table>
+{{#each actors}}
+<li>{{name}}</li>
+{{/each}}

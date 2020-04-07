@@ -7,16 +7,16 @@ module.exports = function (sequelize, DataTypes) {
     user: {
       type: DataTypes.STRING,
     },
-    actorRole1: {
+    actorForRole1: {
       type: DataTypes.STRING,
     },
-    actorRole2: {
+    actorForRole2: {
       type: DataTypes.STRING,
     },
-    actorRole3: {
+    actorForRole3: {
       type: DataTypes.STRING,
     },
-    actorRole4: {
+    actorForRole4: {
       type: DataTypes.STRING,
     },
     description: {
