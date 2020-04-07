@@ -5,6 +5,7 @@ var router = express.Router();
 //post route that takes the form on the recast list
 //posts this data in a row in the new cast table
 router.post('/api/recast', function (req, res) {
+  console.log('api/recast post route: ');
   console.log(req.body);
   db.NewCast.create({
     movie: req.body.movie,
@@ -15,6 +16,7 @@ router.post('/api/recast', function (req, res) {
     actorRole2: req.body.actorRole2,
     actorRole3: req.body.actorRole3,
     actorRole4: req.body.actorRole4,
+    description: req.body.description,
     thumbsUp: 0,
   })
     .then(function (dbNewCast) {
@@ -28,6 +30,47 @@ router.post('/api/recast', function (req, res) {
       res.status(401).json(err);
     });
 });
+
+//Searches outside movie database
+//Stores movie object into our db
+//To be accessed for rendering recast page
+router.post('/api/movies', function (req, res) {
+  console.log('api/movies post route: ');
+  console.log(req.body);
+  db.Movie.create({
+    title: req.body.title,
+    role1: req.body.role1,
+    role2: req.body.role2,
+    role3: req.body.role3,
+    role4: req.body.role4,
+    actor1: req.body.actor1,
+    actor2: req.body.actor2,
+    actor3: req.body.actor3,
+    actor4: req.body.actor4,
+  })
+    .then(function (dbMovie) {
+      res.json(dbMovie);
+    })
+    .catch(function (err) {
+      res.status(401).json(err);
+    });
+});
+
+//returns a boolean of whether or not the movie exists in the database
+// router.get('/api/movies', function (req, res) {
+//   console.log('api/movie get route:');
+//   console.log(req.body);
+//   db.Movie.count({
+//     where: { title: req.body },
+//   }).then((count) => {
+//     if (count != 0) {
+//       //movie appears in database
+//       return true;
+//     }
+//     //movie is not in database
+//     return false;
+//   });
+// });
 
 //A get request when the user searches from the actor database and pulls the actor
 
