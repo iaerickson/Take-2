@@ -5,16 +5,11 @@ var router = express.Router();
 //post route that takes the form on the recast list
 //posts this data in a row in the new cast table
 router.post('/api/recast', function (req, res) {
-<<<<<<< HEAD
   console.log('api recast post route: ');
-=======
-  console.log('api/recast post route: ');
->>>>>>> master
   console.log(req.body);
   db.Recast.create({
     movie: req.body.movie,
     //commenting out user for testing
-<<<<<<< HEAD
     //user: req.body.user,
     user: 'admin',
     role1: req.body.role1,
@@ -26,15 +21,6 @@ router.post('/api/recast', function (req, res) {
     actorForRole3: req.body.actorForRole3,
     actorForRole4: req.body.actorForRole4,
     description: '',
-=======
-    user: req.body.user,
-    //user: "admin",
-    actorRole1: req.body.actorRole1,
-    actorRole2: req.body.actorRole2,
-    actorRole3: req.body.actorRole3,
-    actorRole4: req.body.actorRole4,
-    description: req.body.description,
->>>>>>> master
     thumbsUp: 0,
   })
     .then(function (dbRecast) {
