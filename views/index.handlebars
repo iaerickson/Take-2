@@ -17,25 +17,41 @@ of movie objects and then renders a partial for each --}} --}}
 
 <h2>Results</h2>
 <div id="buttons-view"></div>
-<ul>
-  <p>Current Movies Searched</p>
-  {{#each movies}}
-  <li>
-    <p><span class="label">Movie Title:</span> {{this.title}}</p>
-    <p>Cast</p>
-    <p><span class="label">First Character Role:</span> {{this.role1}}</p>
-    <p><span class="label">Played By:</span> {{this.actor1}}</p>
-    <br>
-    <p><span class="label">Second Character Role:</span> {{this.role2}}</p>
-    <p><span class="label">Played By:</span> {{this.actor2}}</p>
-    <br>
-    <p><span class="label">Third Character Role:</span> {{this.role3}}</p>
-    <p><span class="label">Played By:</span> {{this.actor3}}</p>
-    <br>
-    <p><span class="label">Fourth Character Role:</span> {{this.role4}}</p>
-    <p><span class="label">Played By:</span> {{this.actor4}}</p>
-    <br>
 
-  </li>
-  {{/each}}
-</ul>
+<br>
+<h2>Vote on previous TakeTwo recasts!</h2>
+
+{{#each recast}}
+<div class="card" style="width: 18rem;">
+
+  <div class="card-body">
+    <h2>{{dataValues.movie}}</h2>
+    <h3>Recast by {{dataValues.user}}</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Character Role</th>
+          <th scope="col">New Cast</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{dataValues.role1}}</td>
+          <td>{{dataValues.actorForRole1}}</td>
+        </tr>
+        <tr>
+          <td>{{dataValues.role2}}</td>
+          <td>{{dataValues.actorForRole2}}</td>
+        </tr>
+        <tr>
+          <td>{{dataValues.role3}}</td>
+          <td>{{dataValues.actorForRole3}}</td>
+        </tr>
+        <tr>
+          <td>{{dataValues.role4}}</td>
+          <td>{{dataValues.actorForRole4}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    {{/each}}

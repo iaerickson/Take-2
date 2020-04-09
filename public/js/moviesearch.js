@@ -29,13 +29,25 @@ $(document).ready(function () {
       renderButtons(searchResults);
     });
   });
+<<<<<<< HEAD
+  //<a href ="/${movie.title}"></a>
+  //potentially place after data-name
+=======
 
+>>>>>>> master
   function renderButtons(searchResults) {
     $('#buttons-view').empty();
     searchResults.forEach((movie) => {
       const html = `<button 
         id="${movie.id}" class="movie" 
         data-name="${movie.title}">
+<<<<<<< HEAD
+          ${movie.title}
+        </button>`;
+      $('#buttons-view').append(html);
+    });
+  }
+=======
         <a href ="/${movie.title}"></a>      
           ${movie.title}
         </button>`;
@@ -78,6 +90,7 @@ $(document).ready(function () {
   //     });
   //   });
   // });
+>>>>>>> master
 
   //function that will run to make the search-term palatable for query search
   function queryFormatter(movieTitle) {

@@ -1,6 +1,12 @@
+<<<<<<< HEAD
+<h1>Recast: </h1>
+<h1 id="recast-movie-title">{{this.movie.dataValues.title}}
+</h1>
+=======
 <h1>Recast Movie</h1>
 
 <h1>Recast your movie</h1>
+>>>>>>> master
 
 <table>
   <tr>
@@ -9,6 +15,65 @@
     <th>New Actor</th>
   </tr>
   <tr>
+<<<<<<< HEAD
+    <td id="role1" class="form-control">{{this.movie.dataValues.role1}}</td>
+    <td>{{this.movie.dataValues.actor1}}</td>
+    <td>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Example select</label>
+        <select class="form-control formFields" id="actorForRole1">
+          {{#each actor}}
+          <option>{{dataValues.name}}</option>
+          {{/each}}
+        </select>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td id="role2" class="form-control">{{this.movie.dataValues.role2}}</td>
+    <td>{{this.movie.dataValues.actor2}}</td>
+    <td>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Example select</label>
+        <select class="form-control formFields" id="actorForRole2">
+          {{#each actor}}
+          <option>{{dataValues.name}}</option>
+          {{/each}}
+        </select>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td id="role3" class="form-control">{{this.movie.dataValues.role3}}</td>
+    <td>{{this.movie.dataValues.actor3}}</td>
+    <td>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Example select</label>
+        <select class="form-control formFields" id="actorForRole3">
+          {{#each actor}}
+          <option>{{dataValues.name}}</option>
+          {{/each}}
+        </select>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td id="role4" class="form-control">{{this.movie.dataValues.role4}}</td>
+    <td>{{this.movie.dataValues.actor4}}</td>
+    <td>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Example select</label>
+        <select class="form-control formFields" id="actorForRole4">
+          {{#each actor}}
+          <option>{{dataValues.name}}</option>
+          {{/each}}
+        </select>
+      </div>
+    </td>
+  </tr>
+</table>
+<button id="recast">submit recast</button>
+=======
     <td>{{this.dataValues.role1}}</td>
     <td>{{this.dataValues.actor1}}</td>
     <td>NEW ACTOR</td>
@@ -32,3 +97,4 @@
 {{#each actors}}
 <li>{{name}}</li>
 {{/each}}
+>>>>>>> master
