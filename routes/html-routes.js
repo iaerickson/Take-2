@@ -54,5 +54,16 @@ router.get('/:title', function (req, res) {
   });
 });
 
+router.get('/:title', function (req, res) {
+  db.Movie.findOne({
+    where: { title: req.params.title },
+  }).then(function (dbMovie) {
+    console.log('/:title route');
+    console.log('movie pulled from database:');
+    console.log(dbMovie.dataValues);
+    res.render('recast', dbMovie);
+  });
+});
+
 //
 module.exports = router;

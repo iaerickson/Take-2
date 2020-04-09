@@ -31,7 +31,11 @@ $(document).on('click', '.movie', function (event) {
       actor3: credits.cast[2].name,
       actor4: credits.cast[3].name,
     };
+<<<<<<< HEAD
     $.ajax('/api/movies', {
+=======
+    $.ajax('api/movies', {
+>>>>>>> master
       type: 'POST',
       data: movieObj,
     }).then(function () {

@@ -7,6 +7,7 @@ module.exports = function (sequelize, DataTypes) {
     user: {
       type: DataTypes.STRING,
     },
+<<<<<<< HEAD:models/recast.js
     role1: {
       type: DataTypes.STRING,
     },
@@ -28,6 +29,17 @@ module.exports = function (sequelize, DataTypes) {
     actorForRole3: {
       type: DataTypes.STRING,
     },
+=======
+    actorForRole1: {
+      type: DataTypes.STRING,
+    },
+    actorForRole2: {
+      type: DataTypes.STRING,
+    },
+    actorForRole3: {
+      type: DataTypes.STRING,
+    },
+>>>>>>> master:models/newcast.js
     actorForRole4: {
       type: DataTypes.STRING,
     },
