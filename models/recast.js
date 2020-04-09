@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-  var NewCast = sequelize.define('NewCast', {
+  var Recast = sequelize.define('Recast', {
     movie: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -7,16 +7,28 @@ module.exports = function (sequelize, DataTypes) {
     user: {
       type: DataTypes.STRING,
     },
-    actorRole1: {
+    role1: {
       type: DataTypes.STRING,
     },
-    actorRole2: {
+    role2: {
       type: DataTypes.STRING,
     },
-    actorRole3: {
+    role3: {
       type: DataTypes.STRING,
     },
-    actorRole4: {
+    role4: {
+      type: DataTypes.STRING,
+    },
+    actorForRole1: {
+      type: DataTypes.STRING,
+    },
+    actorForRole2: {
+      type: DataTypes.STRING,
+    },
+    actorForRole3: {
+      type: DataTypes.STRING,
+    },
+    actorForRole4: {
       type: DataTypes.STRING,
     },
     description: {
@@ -31,5 +43,5 @@ module.exports = function (sequelize, DataTypes) {
     },
   });
 
-  return NewCast;
+  return Recast;
 };
