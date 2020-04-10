@@ -34,11 +34,13 @@ $(document).ready(function () {
   function renderButtons(searchResults) {
     $('#buttons-view').empty();
     searchResults.forEach((movie) => {
+      var posterURL = `https://image.tmdb.org/t/p/w154${movie.img}`;
       const html = `<button 
         id="${movie.id}" class="movie" 
         data-name="${movie.title}">
           ${movie.title}
-        </button>`;
+        </button>;
+        <img src=${posterURL}>`;
       $('#buttons-view').append(html);
     });
   }
