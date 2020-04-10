@@ -76,8 +76,18 @@ router.post('/api/movies', function (req, res) {
 //   });
 // });
 
-//A get request when the user searches from the actor database and pulls the actor
+//Update route to increment the thumbs up when someone likes someone's recast
+router.put('/api/thumbsup', function (req, res) {
+  db.Recast.increment('thumbsUp', {
+    where: {
+      id: req.params.id,
+    },
+  }).then(function (dbThumbsUp) {
+    res.json(dbThumbsUp);
+  });
+});
 
+//A get request when the user searches from the actor database and pulls the actor
 router.get('/api/actors/:name', function (req, res) {
   console.log(req.params.name);
   db.Actor.findOne({
