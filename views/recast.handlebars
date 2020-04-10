@@ -14,57 +14,14 @@
         </tr>
       </thead>
     </div>
-    <div class="row">
-      <tr>
-        <td id="role1" class="form-control">{{this.movie.dataValues.role1}}</td>
-        <td>{{this.movie.dataValues.actor1}}</td>
-        <td>
-          <div class="form-group">
-            <select class="form-control formFields" id="actorForRole1">
-              {{#each actor}}
-              <option>{{dataValues.name}}</option>
-              {{/each}}
-            </select>
-          </div>
-        </td>
-      </tr>
-    </div>
-    <div class="row">
-      <tr>
-        <td id="role2" class="form-control">{{this.movie.dataValues.role2}}</td>
-        <td>{{this.movie.dataValues.actor2}}</td>
-        <td>
-          <div class="form-group">
-            <select class="form-control formFields" id="actorForRole2">
-              {{#each actor}}
-              <option>{{dataValues.name}}</option>
-              {{/each}}
-            </select>
-          </div>
-        </td>
-      </tr>
-    </div>
-    <div class="row">
-      <tr>
-        <td id="role3" class="form-control">{{this.movie.dataValues.role3}}</td>
-        <td>{{this.movie.dataValues.actor3}}</td>
-        <td>
-          <div class="form-group">
-            <select class="form-control formFields" id="actorForRole3">
-              {{#each actor}}
-              <option>{{dataValues.name}}</option>
-              {{/each}}
-            </select>
-          </div>
-        </td>
-      </tr>
+    <tbody>
       <div class="row">
         <tr>
-          <td id="role4" class="form-control">{{this.movie.dataValues.role4}}</td>
-          <td>{{this.movie.dataValues.actor4}}</td>
+          <td id="role1" class="form-control">{{this.movie.dataValues.role1}}</td>
+          <td>{{this.movie.dataValues.actor1}}</td>
           <td>
             <div class="form-group">
-              <select class="form-control formFields" id="actorForRole4">
+              <select class="form-control formFields" id="actorForRole1">
                 {{#each actor}}
                 <option>{{dataValues.name}}</option>
                 {{/each}}
@@ -73,6 +30,51 @@
           </td>
         </tr>
       </div>
+      <div class="row">
+        <tr>
+          <td id="role2" class="form-control">{{this.movie.dataValues.role2}}</td>
+          <td>{{this.movie.dataValues.actor2}}</td>
+          <td>
+            <div class="form-group">
+              <select class="form-control formFields" id="actorForRole2">
+                {{#each actor}}
+                <option>{{dataValues.name}}</option>
+                {{/each}}
+              </select>
+            </div>
+          </td>
+        </tr>
+      </div>
+      <div class="row">
+        <tr>
+          <td id="role3" class="form-control">{{this.movie.dataValues.role3}}</td>
+          <td>{{this.movie.dataValues.actor3}}</td>
+          <td>
+            <div class="form-group">
+              <select class="form-control formFields" id="actorForRole3">
+                {{#each actor}}
+                <option>{{dataValues.name}}</option>
+                {{/each}}
+              </select>
+            </div>
+          </td>
+        </tr>
+        <div class="row">
+          <tr>
+            <td id="role4" class="form-control">{{this.movie.dataValues.role4}}</td>
+            <td>{{this.movie.dataValues.actor4}}</td>
+            <td>
+              <div class="form-group">
+                <select class="form-control formFields" id="actorForRole4">
+                  {{#each actor}}
+                  <option>{{dataValues.name}}</option>
+                  {{/each}}
+                </select>
+              </div>
+            </td>
+          </tr>
+        </div>
+    </tbody>
   </table>
   <button id="recast">submit recast</button>
 </div>
