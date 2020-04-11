@@ -65,3 +65,12 @@ function isNewMovie(movTitle) {
     return result;
   });
 }
+
+$(document).on('click', '.vote', function (event) {
+const id = event.target.id;
+$.ajax(`/api/thumbsup/${id}`, {
+  type: 'PUT'
+}).then(function (result) {
+  window.location="/";
+})
+});

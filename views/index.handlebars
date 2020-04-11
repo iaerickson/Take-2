@@ -9,8 +9,7 @@
       <button type="submit">Search!</button>
     </div>
   </form>
-
-  <h2>Results</h2>
+  <div id="results-header"></div>
   <div id="buttons-view"></div>
 </div>
 <br>
@@ -49,8 +48,28 @@
           </tr>
         </tbody>
       </table>
+      <a class="btn btn-primary vote" id="{{dataValues.id}}" >Vote
+        <span class="badge badge-pill badge-success">{{dataValues.thumbsUp}}</span>
+      </a>
     </div>
-  </div>
+    </div>
   <br>
   {{/each}}
 </div>
+
+<style>
+  .movie-wrap{
+    display:inline-flex;
+    margin: auto;
+    padding:2rem;
+    border: 1px solid #e3e3e3;
+    border-radius: 5px;
+    }
+    .movie-wrap button{
+      display:block
+    }
+    .movie-wrap img{
+      margin:auto
+    }
+
+</style>

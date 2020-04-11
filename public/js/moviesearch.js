@@ -33,16 +33,19 @@ $(document).ready(function () {
   //potentially place after data-name
   function renderButtons(searchResults) {
     $('#buttons-view').empty();
-    searchResults.forEach((movie) => {
+    const htmlHD =`<h2>Results:</h2> 
+      <h2>Choose your movie!</h2>`
+      $("#results-header").append(htmlHD);      
+    searchResults.forEach((movie) => {      
       var posterURL = `https://image.tmdb.org/t/p/w154${movie.img}`;
-      const html = `<button 
-        id="${movie.id}" class="movie" 
-        data-name="${movie.title}">
-          ${movie.title}
-        </button>;
-        <img src=${posterURL}>`;
+      const html = `<div class="movie-wrap">
+           <button id="${movie.id}" class="movie" data-name="${movie.title}">
+          ${movie.title} </button>;
+        <img src=${posterURL}>
+        </div>
+        <br>`;        
       $('#buttons-view').append(html);
-    });
+    });    
   }
 
   //function that will run to make the search-term palatable for query search
