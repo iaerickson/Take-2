@@ -77,7 +77,7 @@ router.post('/api/movies', function (req, res) {
 // });
 
 //Update route to increment the thumbs up when someone likes someone's recast
-router.put('/api/thumbsup', function (req, res) {
+router.put('/api/thumbsup/:id', function (req, res) {
   db.Recast.increment('thumbsUp', {
     where: {
       id: req.params.id,
