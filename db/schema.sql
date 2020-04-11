@@ -12,6 +12,7 @@ USE take2db;
 
 
 -- Commenting out tables since we have the sequelize models set up
+--For reference though this is how they would be initialized
 -- CREATE TABLE actors (
 --     position INT NOT NULL,
 --     -- const VARCHAR(9) NOT NULL,

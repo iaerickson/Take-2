@@ -1,16 +1,17 @@
-.movie-wrap{
-    display:inline-block;
-    margin: 1rem;
-    padding:2rem;
-    border: 1px solid #e3e3e3;
-    border-radius: 5px;
-    }
-    .movie-wrap button{
-      display:block
-    }
-    .movie-wrap img{
-      margin:1rem
-    }
-    #buttons-view{
-      display:flex
-    }
+.movie-wrap {
+  display: inline-block;
+  margin: 1rem;
+  padding: 2rem;
+  border: 1px solid #e3e3e3;
+  border-radius: 5px;
+}
+.movie-wrap button {
+  display: block;
+}
+.movie-wrap img {
+  margin: 1rem;
+}
+
+#buttons-view {
+  display: flex;
+}

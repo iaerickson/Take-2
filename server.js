@@ -1,20 +1,13 @@
-//Old way of initializing server
-//=============================
-// var http = require('http');
-// var fs = require('fs');
-//=======================
+//Requiring express and handlebars to set up the server and run the html
+//
 var express = require('express');
 var exphbs = require('express-handlebars');
 
-//Set up our port
-
+//Setting up our port
 var PORT = process.env.PORT || 3000;
 
-//Requring our models for syncing
+//Requiring our models for syncing
 var db = require('./models');
-
-// Create our server (OLD)
-// var server = http.createServer(handleRequest);
 
 //Sets up Express App
 var app = express();
@@ -29,19 +22,6 @@ app.set('view engine', 'handlebars');
 
 // Static directory
 app.use(express.static('public'));
-
-// OLD
-// // Create a function for handling the requests and responses coming into our server
-// function handleRequest(req, res) {
-//   // Here we use the fs package to read our index.html file
-//   fs.readFile(__dirname + '/index.html', function(err, data) {
-//     if (err) throw err;
-//     // We then respond to the client with the HTML page by specifically telling the browser that we are delivering
-//     // an html file.
-//     res.writeHead(200, { 'Content-Type': 'text/html' });
-//     res.end(data);
-//   });
-// }
 
 //Routes
 //======================================
@@ -58,8 +38,3 @@ db.sequelize.sync().then(function () {
     console.log('App listening on PORT ' + PORT);
   });
 });
-
-// OLD WAY
-// server.listen(PORT, function() {
-//   console.log('Server is listening on PORT: ' + PORT);
-// });
