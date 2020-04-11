@@ -11,7 +11,7 @@ router.post('/api/recast', function (req, res) {
     movie: req.body.movie,
     //commenting out user for testing
     //user: req.body.user,
-    user: 'admin',
+    user: 'User',
     role1: req.body.role1,
     role2: req.body.role2,
     role3: req.body.role3,
@@ -24,11 +24,8 @@ router.post('/api/recast', function (req, res) {
     thumbsUp: 0,
   })
     .then(function (dbRecast) {
-      //For testing purposes, after the form is posted, we will just render the form
       res.json(dbRecast);
       console.log(dbRecast);
-      //res.redirect() to page saying recast was submitted
-      //home page
     })
     .catch(function (err) {
       res.status(401).json(err);
@@ -60,22 +57,6 @@ router.post('/api/movies', function (req, res) {
     });
 });
 
-//returns a boolean of whether or not the movie exists in the database
-// router.get('/api/movies', function (req, res) {
-//   console.log('api/movie get route:');
-//   console.log(req.body);
-//   db.Movie.count({
-//     where: { title: req.body },
-//   }).then((count) => {
-//     if (count != 0) {
-//       //movie appears in database
-//       return true;
-//     }
-//     //movie is not in database
-//     return false;
-//   });
-// });
-
 //Update route to increment the thumbs up when someone likes someone's recast
 router.put('/api/thumbsup/:id', function (req, res) {
   db.Recast.increment('thumbsUp', {
@@ -95,35 +76,8 @@ router.get('/api/actors/:name', function (req, res) {
       name: req.params.name,
     },
   }).then(function (dbActor) {
-    //code to add the actor we just pulled to the db to the form
     res.json(dbActor);
-    //Figure out how this route works with the search bar/suggested actors
-    //just want to put the name from the
   });
 });
-
-//make a get request that gets everytime someone types something in
-// //handled in handlebars to produce dynamically generated input list
-
-//A get request when someone wants to view a user's recast list
-
-//Create
-//Read
-//Update
-//  Put Request
-//  //thumbs up increment route
-//finding the recast list by its id
-//
-// app.get('/api/recast/:id', function(req, res) {
-//   db.NewCast.findOne({
-//     where: {
-//       id: req.params.id
-//     }
-//   }).then(func);
-// });
-//
-//method to render and pull all recasts
-
-//Delete
 
 module.exports = router;

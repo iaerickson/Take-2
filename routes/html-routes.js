@@ -6,38 +6,21 @@ var db = require('../models');
 
 // Each of the below routes just handles the HTML page that the user gets sent to.
 
-// index route loads our index.html (no handlebars)
-// app.get('/', function (req, res) {
-//   res.sendFile(path.join(__dirname, '../public/index.html'));
-// });
-
+//Index route loads all recasts
+//Loads them in order of must thumbs up to least
 router.get('/', function (req, res) {
   var allRecastsObj = {};
-  db.Recast.findAll({}).then(function (dbRecast) {
+  db.Recast.findAll({
+    order: [['thumbsUp', 'DESC']],
+  }).then(function (dbRecast) {
     console.log(dbRecast);
     allRecastsObj.recast = dbRecast;
     res.render('index', allRecastsObj);
   });
 });
 
-// router.get('/', function (req, res) {
-//   var allRecastsInfo = {};
-//   db.Recast.findAll({}).then(function (dbRecast) {
-//     allRecastsInfo.recast = dbRecast;
-//     allRecastsInfo.movie = [];
-//     //find unique movies if not allowed
-//     for (let i = 0; i < allRecastsInfo.recast.length; i++) {
-//       let movTitle = allRecastsInfo.recast[i].dataValues.movie;
-//       db.Movie.findOne({
-//         where: { title: movTitle },
-//       }).then(function (dbMovie) {
-//         allRecastsInfo.movie.push(dbMovie);
-//       });
-//     }
-//     res.render('index', allRecastsInfo);
-//   });
-// });
-
+//When we select a movie we want to recast,
+//Loads movie info to table along with all actors to choose from in actor db
 router.get('/:title', function (req, res) {
   var recastObj = {};
   db.Movie.findOne({
@@ -51,17 +34,6 @@ router.get('/:title', function (req, res) {
       recastObj.actor = dbActor;
       res.render('recast', recastObj);
     });
-  });
-});
-
-router.get('/:title', function (req, res) {
-  db.Movie.findOne({
-    where: { title: req.params.title },
-  }).then(function (dbMovie) {
-    console.log('/:title route');
-    console.log('movie pulled from database:');
-    console.log(dbMovie.dataValues);
-    res.render('recast', dbMovie);
   });
 });
 

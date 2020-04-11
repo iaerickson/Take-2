@@ -2,11 +2,11 @@
   <h1>Take2</h1>
   <h2>The Movie Recast App</h2>
   <br>
-  <h2>Search for Movie</h2>
+  <h2>Search for a Movie</h2>
   <form id="movieSearch" class="button-size">
     <div class="row">
-      <input type="text" name="movie"></input>
-      <button type="submit">Search!</button>
+      <input class="two-thirds column" type="text" name="movie"></input>
+      <button class="one-third column" type="submit">Search!</button>
     </div>
   </form>
   <div id="results-header"></div>
@@ -14,7 +14,7 @@
 </div>
 <br>
 <div class="container">
-  <h2>Vote on previous TakeTwo recasts!</h2>
+  <h2>Vote on previous Take2 Recasts!</h2>
 
   {{#each recast}}
   <div class="card" style="width: 36rem;">
@@ -48,11 +48,11 @@
           </tr>
         </tbody>
       </table>
-      <a class="btn btn-primary vote" id="{{dataValues.id}}" >Vote
+      <a class="btn btn-primary vote" id="{{dataValues.id}}">Thumbs Up
         <span class="badge badge-pill badge-success">{{dataValues.thumbsUp}}</span>
       </a>
     </div>
-    </div>
+  </div>
   <br>
   {{/each}}
 </div>
