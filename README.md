@@ -2,88 +2,66 @@
 
 Take2 is the new time-killer for filmheads and movie buffs. Got a great idea for a remake? Think you could show one up on J.J. Abrams? With Take2, you can search for any movie, pull down its main cast list, and choose your ideal fantasy cast list for this movie. Once you submit your selection, your Recast will be displayed on the front page for others to admire and vote on.
 
+Heroku
+https://take-2.herokuapp.com/
+
 ## Getting Started
 
+Github
 https://github.com/iaerickson/project2
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
+Git clone the repo into a new directory
+
 ### Prerequisites
 
-What things you need to install the software and how to install them
+Make sure you have Node and NPM installed globally. If you are not sure,
+"Google is your friend" -Ron.
 
-```
-Give examples
-```
+For testing/coding purposes, make sure you have a mysql database, vscode(or some other editor), a web browser (chrome).
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+Once the repo is cloned, run 'npm install' in the console/terminal to install the package.json.
 
-Say what the step will be
+Go to the config.json in the config folder and make sure your username and password in development match your connection settings
 
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+Run "node server.js" from the terminal/console in the main directory and go to "localhost:3000" to get started.
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
+If you would like to do testing, add console.log() our the responses from the api and html routes to see the data and how you want to manipulate
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+We deployed our project on Heroku. For instructions how to do that, go here:
+https://devcenter.heroku.com/articles/git
+
+Additionally, we require the add-on, [JawsDB](https://devcenter.heroku.com/articles/jawsdb) for functional deployment on heroku.
 
 ## Built With
 
-- [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-- [Maven](https://maven.apache.org/) - Dependency Management
-- [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+- [skeleton-ui](http://getskeleton.com/) - Web framework
+- [bootstrap](https://take-2.herokuapp.com/) - Web framework
+- [sequelize](https://sequelize.org/) - Node.js orm
+- [JawsDB](https://devcenter.heroku.com/articles/jawsdb) -Heroku DB Connection Add-On
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read be very nice! We are but humble coding students. Feel free to reach out to Ian or Anthony through GitHub if you have any questions, suggestions, or inquiries.
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
+At this current version, we have not incorporated versioning.
 
 ## Authors
 
-- **Billie Thompson** - _Initial work_ - [PurpleBooth](https://github.com/PurpleBooth)
+- **Anthony Arroyo** - https://github.com/aroyals22
+- **Ian Erickson** - https://github.com/iaerickson/
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- We would like to dedicate our efforts and hard-work to John Davis and his family.
