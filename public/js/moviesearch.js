@@ -38,7 +38,7 @@ $(document).ready(function () {
       $("#results-header").append(htmlHD);      
     searchResults.forEach((movie) => {      
       var posterURL = `https://image.tmdb.org/t/p/w154${movie.img}`;
-      const html = `<div class="movie-wrap">
+      const html = `<div class="movie-wrap one-third-column">
            <button id="${movie.id}" class="movie" data-name="${movie.title}">
           ${movie.title} </button>;
         <img src=${posterURL}>
