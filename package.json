@@ -19,7 +19,7 @@
   "homepage": "https://github.com/iaerickson/project2#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "express-handlebars": "^4.0.3",
+    "express-handlebars": "^5.3.1",
     "express-session": "^1.17.0",
     "handlebars": "^4.7.6",
     "mysql": "^2.18.1",
