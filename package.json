@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/iaerickson/project2#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-handlebars": "^4.0.3",
     "express-session": "^1.17.0",
     "handlebars": "^4.7.6",
